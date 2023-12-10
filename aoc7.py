@@ -85,7 +85,7 @@ def order_hands(hands):
 def str2ordered_hand(card_string):
     # Define the mapping of card labels to their corresponding values
     card_values = {'A': 14, 'K': 13, 'Q': 12, 'J': 1, 'T': 10, '9': 9, '8': 8, '7': 7, '6': 6, '5': 5, '4': 4, '3': 3, '2': 2}
-
+    
     # Convert each character in the card string to its corresponding value
     ordered_list = [card_values[card] for card in card_string]
 
