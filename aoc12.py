@@ -23,9 +23,7 @@ def solve(pos,sets,length):
 N=0
 folder_path = 'C:\\Users\\yimqi\\Desktop\\Input.txt'
 p2 = True
-l = []
-hashes = []
-unknowns = []
+
 with open(folder_path, 'r') as file:
     for ln, line in enumerate(file):        
         l=(list(map(int,re.findall(r'-?\d+', line))))
