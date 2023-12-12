@@ -11,7 +11,6 @@ def solve(pos,sets,length):
     n = 0
     #no fill: copy last or complete a new set
     if st[pos] == '.' or st[pos] == '?': 
-        #if sets==0: only length=0
         if not length: #. after this
             if sets:
                 n += solve(pos-1,sets-1,l[sets-1])
@@ -38,5 +37,4 @@ with open(folder_path, 'r') as file:
         a = [[[-1]*(m+1) for j in range(len(l)+1)] for i in range(len(st))]
         w = solve(len(st)-1,len(l),0)
         N+=w
-        print(ln,w)
 print(N)
