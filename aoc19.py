@@ -63,7 +63,6 @@ while len(q):
         continue
     if w=='A':
         continue
-    x = w
     for k in g[w]:
         a,b,c,d = [i for i in k]
         if d not in ranges:
@@ -86,7 +85,7 @@ while len(q):
         else:
             for i in copy.deepcopy(ranges[w]):
                 ranges[d].append(i)
-            ranges[w] = []
+            del ranges[w]
 for g in ranges['A']:
     n = 1
     for u in g:
