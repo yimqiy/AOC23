@@ -7,14 +7,12 @@ ma = {'x':0,'m':1,'a':2,'s':3}
 with open(folder_path, 'r') as file:
     for ln, line in enumerate(file):
         if z:
-            v = [0,0,0,0]
+            v=[]
             for u in line[1:-2].split(","):
                 a,b = u.split('=')
-                v[ma[a]]=int(b)
+                v.append(int(b))
             w = 'in'
-            #print(v)
             while True:
-                #print(w)
                 if w=='R':
                     break
                 if w=='A':
